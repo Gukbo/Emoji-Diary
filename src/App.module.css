@@ -1,0 +1,65 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 720px;
+  height: 1080px;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+.bgHappy {
+  background-color: #ffa15c;
+  color: #f0f0f0;
+}
+
+.bgLove {
+  background-color: #fbbddf;
+  color: #444444;
+}
+
+.bgSoso {
+  background-color: #f0f0f0;
+  color: #444444;
+}
+
+.bgNerv {
+  background-color: #90a4ae;
+  color: #444444;
+}
+
+.bgSad {
+  background-color: #4169e1;
+  color: #f0f0f0;
+}
+
+.bgSleepy {
+  background-color: #aed581;
+  color: #444444;
+}
+
+.bgDizzy {
+  background-color: #9e7bb5;
+  color: #444444;
+}
+
+.bgAngry {
+  background-color: #bc544b;
+  color: #f0f0f0;
+}
+
+.bgCrazy {
+  background-color: #455a64;
+  color: #f0f0f0;
+}

@@ -1,0 +1,10 @@
+.emojiBox {
+  margin: 20px;
+  font-size: 2rem;
+}
+
+.prevButton,
+.nextButton {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
