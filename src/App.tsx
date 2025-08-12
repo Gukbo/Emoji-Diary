@@ -28,7 +28,7 @@ export default function App() {
   };
 
   return (
-    <div className={styles.mainContainer}>
+    <div className={`${styles.mainContainer} ${bgClass}`}>
       <div className={`${styles.appContainer} ${bgClass}`}>
         <p>오늘의 기분을 선택해보세요!</p>
         <Emoji
