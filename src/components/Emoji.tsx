@@ -1,5 +1,4 @@
 import styles from "./Emoji.module.css";
-import React from "react";
 
 type EmojiProps = {
   index: number;

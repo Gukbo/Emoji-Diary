@@ -3,21 +3,22 @@ import Emoji from "./components/Emoji";
 import styles from "./App.module.css";
 
 const emojiData = [
-  { icon: "😀", bg: "Happy" },
-  { icon: "😍", bg: "Love" },
-  { icon: "😐", bg: "Soso" },
-  { icon: "😥", bg: "Nerv" },
-  { icon: "😭", bg: "Sad" },
-  { icon: "😴", bg: "Sleepy" },
-  { icon: "😵", bg: "Dizzy" },
-  { icon: "🤬", bg: "Angry" },
-  { icon: "😵‍💫", bg: "Crazy" },
+  { icon: "😀", bg: "Happy", fc: "White" },
+  { icon: "😍", bg: "Love", fc: "Gray" },
+  { icon: "😐", bg: "Soso", fc: "Gray" },
+  { icon: "😥", bg: "Nerv", fc: "Gray" },
+  { icon: "😭", bg: "Sad", fc: "White" },
+  { icon: "😴", bg: "Sleepy", fc: "Gray" },
+  { icon: "😵", bg: "Dizzy", fc: "Gray" },
+  { icon: "🤬", bg: "Angry", fc: "White" },
+  { icon: "😵‍💫", bg: "Crazy", fc: "White" },
 ];
 
 export default function App() {
   const [index, setIndex] = useState(0);
 
   const bgClass = styles["bg" + emojiData[index].bg];
+  const fcClass = styles["fc" + emojiData[index].fc];
 
   const handlePrev = () => {
     setIndex((prev) => (prev - 1 + emojiData.length) % emojiData.length);
@@ -30,14 +31,21 @@ export default function App() {
   return (
     <div className={`${styles.mainContainer} ${bgClass}`}>
       <div className={`${styles.appContainer} ${bgClass}`}>
-        <p>오늘의 기분을 선택해보세요!</p>
+        <p className={`${styles.emojiP} ${fcClass}`}>
+          오늘의 기분을 선택해보세요!
+        </p>
         <Emoji
           index={index}
           emojiData={emojiData}
           onPrev={handlePrev}
           onNext={handleNext}
         />
-        <p>이모지를 클릭하여 기분을 변경할 수 있습니다.</p>
+        <p className={`${styles.emojiName} ${fcClass}`}>
+          {emojiData[index].bg}
+        </p>
+        <p className={`${styles.emojiP} ${fcClass}`}>
+          이모지를 클릭하여 기분을 변경할 수 있습니다.
+        </p>
       </div>
     </div>
   );

@@ -5,6 +5,11 @@
 
 .prevButton,
 .nextButton {
-  font-size: 1.2rem;
+  font-size: 2rem;
+  font-weight: bolder;
   cursor: pointer;
+  padding: 0.3rem 0.8rem;
+  border: none;
+  background-color: transparent;
+  color: var(--color-gray);
 }
